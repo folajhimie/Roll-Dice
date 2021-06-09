@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@500&family=Titillium+Web:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans HK', sans-serif;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom, orange, red);
+    overflow: hidden;
+}
+.container{
+    width: 400px;
+    background-color: white;
+    border-radius: 6px;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 35vh;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.575);
+}
+.dice-wrapper{
+    width: 100%;
+    padding: 30px;
+    padding-left: 35%;
+    padding-right: 35%;
+    display: flex;
+    justify-content: space-around;
+}
+p{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+button{
+    position: absolute;
+    left: 37%;
+    padding: 4px;
+    border-radius: 6px;
+    background: linear-gradient(to left, rgb(0, 255, 64), rgb(0, 204, 255));
+    border-color: rgb(0, 255, 170);
+    cursor: pointer;
+    transition: all .6s;
+}
+button:hover{
+    /* opacity: 0.7; */
+    background: linear-gradient(to left, rgba(255, 0, 98, 0.747), rgba(255, 60, 0, 0.76));
+    border-color: rgba(255, 0, 98, 0.747);
+    transition: all .7s;
+}
+.shake{
+    animation: shake .5s infinite;
+}
+@keyframes shake{
+    0%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(-8deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
